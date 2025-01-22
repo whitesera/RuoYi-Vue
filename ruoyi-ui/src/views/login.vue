@@ -103,30 +103,51 @@ export default {
       immediate: true
     }
   },
-  created() {
-    this.getCode();
-    this.getCookie();
+
+  // 在组件创建时执行的方法
+created() {
+  // 获取验证码图片
+  this.getCode();
+  // 从cookie中获取用户信息
+  this.getCookie();
+},
+
+// 定义组件的方法
+methods: {
+  /**
+   * 获取验证码图片
+   * 该方法在组件创建时调用，用于初始化验证码图片和相关参数
+   */
+  getCode() {
+    // 调用服务端接口获取验证码图片
+    getCodeImg().then(res => {
+      // 根据服务端返回的结果设置验证码启用状态
+      this.captchaEnabled = res.captchaEnabled === undefined ? true : res.captchaEnabled;
+      // 如果验证码启用，则更新验证码图片URL和UUID
+      if (this.captchaEnabled) {
+        this.codeUrl = "data:image/gif;base64," + res.img;
+        this.loginForm.uuid = res.uuid;
+      }
+    });
   },
-  methods: {
-    getCode() {
-      getCodeImg().then(res => {
-        this.captchaEnabled = res.captchaEnabled === undefined ? true : res.captchaEnabled;
-        if (this.captchaEnabled) {
-          this.codeUrl = "data:image/gif;base64," + res.img;
-          this.loginForm.uuid = res.uuid;
-        }
-      });
-    },
-    getCookie() {
-      const username = Cookies.get("username");
-      const password = Cookies.get("password");
-      const rememberMe = Cookies.get('rememberMe')
-      this.loginForm = {
-        username: username === undefined ? this.loginForm.username : username,
-        password: password === undefined ? this.loginForm.password : decrypt(password),
-        rememberMe: rememberMe === undefined ? false : Boolean(rememberMe)
-      };
-    },
+
+  /**
+   * 从cookie中获取用户信息
+   * 该方法在组件创建时调用，用于初始化登录表单的用户名、密码和记住我状态
+   */
+  getCookie() {
+    // 从cookie中获取用户名、密码和记住我状态
+    const username = Cookies.get("username");
+    const password = Cookies.get("password");
+    const rememberMe = Cookies.get('rememberMe')
+    // 根据cookie中的信息更新登录表单
+    this.loginForm = {
+      username: username === undefined ? this.loginForm.username : username,
+      password: password === undefined ? this.loginForm.password : decrypt(password),
+      rememberMe: rememberMe === undefined ? false : Boolean(rememberMe)
+    };
+  },
+
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
