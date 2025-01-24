@@ -61,7 +61,7 @@
     </el-form>
     <!--  底部  -->
     <div class="el-register-footer">
-      <span>Copyright © 2018-2025 ruoyi.vip All Rights Reserved.</span>
+      <span>Copyright © 2025 whitesera All Rights Reserved.</span>
     </div>
   </div>
 </template>
@@ -152,7 +152,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url("../assets/images/login-background.jpg");
+  background-image: url("../assets/images/login BG.jpg");
   background-size: cover;
 }
 .title {
