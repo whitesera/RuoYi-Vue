@@ -2,6 +2,7 @@ package com.ruoyi.personnel.mapper;
 
 import java.util.List;
 import com.ruoyi.personnel.domain.PersonnelArchives;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 人事档案花名册Mapper接口
@@ -9,6 +10,7 @@ import com.ruoyi.personnel.domain.PersonnelArchives;
  * @author ruoyi
  * @date 2025-01-21
  */
+@Mapper
 public interface PersonnelArchivesMapper 
 {
     /**
