@@ -1,3 +1,4 @@
+<!--首页页面-->
 <template>
   <div class="app-container home">
     <el-row :gutter="20">
@@ -46,25 +47,25 @@
       <el-col :sm="24" :lg="12" style="padding-left: 50px">
         <el-row>
           <el-col :span="12">
-            <h2>技术选型</h2>
+            <h2>小标题h2h2h2</h2>
           </el-col>
         </el-row>
         <el-row>
           <el-col :span="6">
             <h4>公告</h4>
             <ul>
-              <li>因不可抗原因</li>
-              <li>本次会议取消</li>
-              <li>大家互相转告</li>
+              <li>本周六8点到22点</li>
+              <li>在中心开展福利活动</li>
+              <li>请大家互相转告参与</li>
               <li>...</li>
             </ul>
           </el-col>
           <el-col :span="6">
             <h4>通知</h4>
             <ul>
-              <li>今天下午2点到3点</li>
-              <li>全体XX成员</li>
-              <li>在会议室集合</li>
+              <li>恭喜您在福利活动中</li>
+              <li>获得一等奖</li>
+              <li>请尽快领取</li>
               <li>...</li>
             </ul>
           </el-col>
@@ -157,7 +158,7 @@ export default {
   }
 
   h4 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   h2 {
