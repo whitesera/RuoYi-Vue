@@ -637,7 +637,14 @@ import { listArchives, getArchives, delArchives, addArchives, updateArchives } f
 
 export default {
   name: "Archives",
-  dicts: ['personnel_archives_employmenttype', 'personnel_archives_nationality', 'personnel_archives_contracttype', 'personnel_archives_hukoutype', 'personnel_archives_political', 'personnel_archives_marital', 'personnel_archives_gender', 'personnel_archives_education'],
+  dicts: ['personnel_archives_employmenttype',
+    'personnel_archives_nationality',
+    'personnel_archives_contracttype',
+    'personnel_archives_hukoutype',
+    'personnel_archives_political',
+    'personnel_archives_marital',
+    'personnel_archives_gender',
+    'personnel_archives_education'],
   data() {
     return {
       // 遮罩层
@@ -701,14 +708,24 @@ export default {
       // 表单校验
       rules: {
         workNumber: [
-          { required: true, message: "工号不能为空", trigger: "blur" }
+          { required: true, message: "工号不能为空！", trigger: "blur" }
         ],
         name: [
-          { required: true, message: "姓名不能为空", trigger: "blur" }
+          { required: true, message: "姓名不能为空！", trigger: "blur" }
+        ],
+        gender:[
+          {required:true,message:"性别不能为空！",triggrr:"blur"}
         ],
         idCard: [
-          { required: true, message: "身份证号不能为空", trigger: "blur" }
+          { required: true, message: "身份证号不能为空！", trigger: "blur" }
         ],
+        contactNumber: [
+          {requirde:true,message:"联系方式不能为空！",trigger:"blur"}
+        ],
+        emergencyContact:[
+          {requirde:true,message:"紧急联系人不能为空！",trigger:"blur"}
+        ],
+
       }
     };
   },
