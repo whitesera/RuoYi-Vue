@@ -25,6 +25,8 @@
     <userTask id="sid-b64c74d1-1bb8-4675-963b-198d44139877" name="个人档案"/>
     <sequenceFlow id="sid-e59b267c-3a2b-45ad-aa38-11a146b499dc" sourceRef="sid-0de9f9f3-cc17-4907-8f24-803b577c2297" targetRef="sid-b64c74d1-1bb8-4675-963b-198d44139877" name="offer归档"/>
     <userTask id="sid-d07040b7-6923-4a57-a4fe-67b0c061b3ca" name="各中心负责人"/>
+    <endEvent id="sid-6585e007-5311-4824-aceb-6668d3c97dac"/>
+    <sequenceFlow id="sid-f09849d8-667e-47c1-b0c4-7ef1af93f33a" sourceRef="sid-9c4e2571-e432-4b80-a1c2-b45590f788ba" targetRef="sid-6585e007-5311-4824-aceb-6668d3c97dac" name="流程结束"/>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_招聘流程">
     <bpmndi:BPMNPlane bpmnElement="招聘流程" id="BPMNPlane_招聘流程">
@@ -114,6 +116,13 @@
       <bpmndi:BPMNEdge id="edge-404e4aa1-db43-4d35-9086-7fe04209fb78" bpmnElement="sid-e59b267c-3a2b-45ad-aa38-11a146b499dc">
         <omgdi:waypoint x="-802.7501" y="600.00006"/>
         <omgdi:waypoint x="-645.0" y="599.99994"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-58a1e623-7f6b-48fe-a325-4262631e6167" bpmnElement="sid-6585e007-5311-4824-aceb-6668d3c97dac">
+        <omgdc:Bounds x="-860.0" y="1005.0" width="30.0" height="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-266fcd55-5db4-461d-b925-03458a803da1" bpmnElement="sid-f09849d8-667e-47c1-b0c4-7ef1af93f33a">
+        <omgdi:waypoint x="-852.7502" y="945.0"/>
+        <omgdi:waypoint x="-845.0" y="1005.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

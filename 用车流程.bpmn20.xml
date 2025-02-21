@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="用车流程" name="用车流程" isExecutable="true">
+    <startEvent id="sid-5e703477-41f9-475d-8f4f-22ab057f2385" name="用车流程"/>
+    <userTask id="sid-cacdbc52-4d72-414c-8776-82a327e9dcb8" name="用车人"/>
+    <sequenceFlow id="sid-7daae9d2-5831-40e9-b4f6-b186f870e31d" sourceRef="sid-5e703477-41f9-475d-8f4f-22ab057f2385" targetRef="sid-cacdbc52-4d72-414c-8776-82a327e9dcb8" name="流程开始"/>
+    <userTask id="sid-6adfd758-c673-480c-90de-63fadd772d2c" name="经理"/>
+    <sequenceFlow id="sid-128e82d5-f7eb-4142-af95-c9354d62f8d2" sourceRef="sid-cacdbc52-4d72-414c-8776-82a327e9dcb8" targetRef="sid-6adfd758-c673-480c-90de-63fadd772d2c" name="用车申请"/>
+    <userTask id="sid-1b2a7196-2fe3-498f-9cc6-56445b2088be" name="综合专员"/>
+    <sequenceFlow id="sid-28ca91ab-8cc3-4398-a545-28c1d13239e1" sourceRef="sid-6adfd758-c673-480c-90de-63fadd772d2c" targetRef="sid-1b2a7196-2fe3-498f-9cc6-56445b2088be" name="审核通过"/>
+    <userTask id="sid-0b3f1dde-368f-46b6-aa6d-4ed71d88ed7e" name="司机"/>
+    <sequenceFlow id="sid-1703faa1-ad5d-490c-b4ed-3a6dc836b715" sourceRef="sid-1b2a7196-2fe3-498f-9cc6-56445b2088be" targetRef="sid-0b3f1dde-368f-46b6-aa6d-4ed71d88ed7e" name="分配司机"/>
+    <sequenceFlow id="sid-f70d0c9d-b998-464c-a58c-23fc6bc5a02c" sourceRef="sid-1b2a7196-2fe3-498f-9cc6-56445b2088be" targetRef="sid-cacdbc52-4d72-414c-8776-82a327e9dcb8" name="车辆，司机情况反馈"/>
+    <sequenceFlow id="sid-d465d3da-717c-44fe-92ed-94abc251a19b" sourceRef="sid-0b3f1dde-368f-46b6-aa6d-4ed71d88ed7e" targetRef="sid-977ed174-5380-4a7d-90d4-a3bb75420949" name="提交行程结束结果"/>
+    <userTask id="sid-977ed174-5380-4a7d-90d4-a3bb75420949" name="档案"/>
+    <endEvent id="sid-de4d5776-e020-4f09-83de-7c332cadfb7d"/>
+    <sequenceFlow id="sid-ad0994ef-de2e-4538-aa97-70e53914b892" sourceRef="sid-977ed174-5380-4a7d-90d4-a3bb75420949" targetRef="sid-de4d5776-e020-4f09-83de-7c332cadfb7d" name="流程结束"/>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_用车流程">
+    <bpmndi:BPMNPlane bpmnElement="用车流程" id="BPMNPlane_用车流程">
+      <bpmndi:BPMNShape id="shape-d465af0a-cf58-4cac-ab66-57109b73118d" bpmnElement="sid-5e703477-41f9-475d-8f4f-22ab057f2385">
+        <omgdc:Bounds x="0.0" y="-105.0" width="30.0" height="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape-e42d148e-b49b-4e8d-8d9e-1e3d33e3e75a" bpmnElement="sid-cacdbc52-4d72-414c-8776-82a327e9dcb8">
+        <omgdc:Bounds x="-35.0" y="-30.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-696ae04f-63e0-44ff-9595-41c0d0d3d725" bpmnElement="sid-7daae9d2-5831-40e9-b4f6-b186f870e31d">
+        <omgdi:waypoint x="15.0" y="-75.0"/>
+        <omgdi:waypoint x="15.0" y="-30.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-e413b7b1-3415-4c67-886e-6c9344f5e03b" bpmnElement="sid-6adfd758-c673-480c-90de-63fadd772d2c">
+        <omgdc:Bounds x="-35.0" y="175.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-41baf99b-fefb-446c-91ec-4dbe74654513" bpmnElement="sid-128e82d5-f7eb-4142-af95-c9354d62f8d2">
+        <omgdi:waypoint x="15.0" y="50.0"/>
+        <omgdi:waypoint x="15.0" y="175.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-610b6216-13d9-4752-9712-cccd45a2f7d7" bpmnElement="sid-1b2a7196-2fe3-498f-9cc6-56445b2088be">
+        <omgdc:Bounds x="-35.0" y="345.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-0bd667c6-0715-4092-bef2-3054ed97343e" bpmnElement="sid-28ca91ab-8cc3-4398-a545-28c1d13239e1">
+        <omgdi:waypoint x="15.0" y="255.0"/>
+        <omgdi:waypoint x="15.0" y="345.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-6edea24c-c5cb-4e57-8d85-72cb75a7a4b6" bpmnElement="sid-0b3f1dde-368f-46b6-aa6d-4ed71d88ed7e">
+        <omgdc:Bounds x="-35.0" y="505.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-ec07a265-a77f-4286-b692-4d45c829621f" bpmnElement="sid-1703faa1-ad5d-490c-b4ed-3a6dc836b715">
+        <omgdi:waypoint x="15.0" y="425.0"/>
+        <omgdi:waypoint x="15.0" y="504.99997"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-d312dad1-c4b7-46f6-92b6-0461dd8cdbbe" bpmnElement="sid-f70d0c9d-b998-464c-a58c-23fc6bc5a02c">
+        <omgdi:waypoint x="65.0" y="385.00003"/>
+        <omgdi:waypoint x="295.0" y="385.00003"/>
+        <omgdi:waypoint x="295.0" y="10.0"/>
+        <omgdi:waypoint x="65.0" y="10.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-3e690649-235d-4292-a053-54f0e2827bdf" bpmnElement="sid-d465d3da-717c-44fe-92ed-94abc251a19b">
+        <omgdi:waypoint x="15.0" y="585.0"/>
+        <omgdi:waypoint x="15.0" y="730.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-bfd4220f-43a1-4643-bac1-9025d63132ae" bpmnElement="sid-977ed174-5380-4a7d-90d4-a3bb75420949">
+        <omgdc:Bounds x="-35.0" y="730.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape-0369f2b4-8437-4faf-b223-af1b4ad2b34d" bpmnElement="sid-de4d5776-e020-4f09-83de-7c332cadfb7d">
+        <omgdc:Bounds x="0.0" y="870.0" width="30.0" height="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-d31b8a4b-7ad0-4790-a4d2-bc2b76020a0e" bpmnElement="sid-ad0994ef-de2e-4538-aa97-70e53914b892">
+        <omgdi:waypoint x="15.0" y="810.0"/>
+        <omgdi:waypoint x="15.0" y="870.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
