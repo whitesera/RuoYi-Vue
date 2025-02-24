@@ -16,7 +16,7 @@
     <userTask id="sid-2f2cc0ad-b037-441d-93da-cfa73466fa13" name="面试负责人"/>
     <sequenceFlow id="sid-8ec6b99b-6d8b-4a04-87ff-bd7129fc4c7b" sourceRef="sid-d07040b7-6923-4a57-a4fe-67b0c061b3ca" targetRef="sid-2f2cc0ad-b037-441d-93da-cfa73466fa13" name="安排面试"/>
     <sequenceFlow id="sid-0ca5f076-eba4-4493-ae8a-647447f72f38" sourceRef="sid-aaf789a3-f265-407c-880a-2b6bd9d12dd4" targetRef="sid-2f2cc0ad-b037-441d-93da-cfa73466fa13" name="安排面试"/>
-    <userTask id="sid-8d0c4b5b-570a-4690-858a-dc9dc0a74b23" name="简历"/>
+    <userTask id="sid-8d0c4b5b-570a-4690-858a-dc9dc0a74b23" name="简历资料表格等"/>
     <sequenceFlow id="sid-9d2c8383-8562-4fea-908a-393355371d92" sourceRef="sid-2f2cc0ad-b037-441d-93da-cfa73466fa13" targetRef="sid-c11ffb91-cf21-4714-a3b3-069a83d16463" name="评分返还"/>
     <userTask id="sid-0de9f9f3-cc17-4907-8f24-803b577c2297" name="部门"/>
     <sequenceFlow id="sid-192ede82-bbd7-48f0-8801-84dd4b55662a" sourceRef="sid-2f2cc0ad-b037-441d-93da-cfa73466fa13" targetRef="sid-0de9f9f3-cc17-4907-8f24-803b577c2297" name="谈薪"/>

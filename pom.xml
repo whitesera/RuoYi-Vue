@@ -218,9 +218,17 @@
                 <version>${ruoyi.version}</version>
             </dependency>
 
+            <!-- 人事管理-->
             <dependency>
                 <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-personnel</artifactId>
+                <version>${ruoyi.version}</version>
+            </dependency>
+
+            <!-- 工作流程-->
+            <dependency>
+                <groupId>com.ruoyi</groupId>
+                <artifactId>ruoyi-workflow</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
 
@@ -235,6 +243,7 @@
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
         <module>ruoyi-personnel</module>
+        <module>ruoyi-workflow</module>
     </modules>
     <packaging>pom</packaging>
 

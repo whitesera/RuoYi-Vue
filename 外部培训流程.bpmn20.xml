@@ -24,13 +24,13 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_外部培训流程">
     <bpmndi:BPMNPlane bpmnElement="外部培训流程" id="BPMNPlane_外部培训流程">
       <bpmndi:BPMNShape id="shape-bc0aec59-4c52-4393-b3af-52bd2a7ffa90" bpmnElement="sid-4da80f5c-1d92-455e-a15c-c0947911580f">
-        <omgdc:Bounds x="-235.0" y="-1125.0" width="30.0" height="30.0"/>
+        <omgdc:Bounds x="-235.0" y="-1150.0" width="30.0" height="30.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape-574bfbf6-5d2f-458d-aeb3-bc311f80d468" bpmnElement="sid-d68dd943-0537-4fa2-aa0e-85cfffd8e660">
         <omgdc:Bounds x="-270.0" y="-1065.0" width="100.0" height="80.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="edge-24e0dfee-706d-4ec3-9432-3fc1528a768e" bpmnElement="sid-3aaa2793-bb03-4ff1-a149-8c989df99672">
-        <omgdi:waypoint x="-220.0" y="-1095.0"/>
+        <omgdi:waypoint x="-220.0" y="-1120.0"/>
         <omgdi:waypoint x="-220.0" y="-1065.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="shape-1d6c72b2-c3e7-49c8-8f15-2319f48468d4" bpmnElement="sid-f5f59a03-b36e-4fe0-8d4f-6392d176c222">
@@ -70,7 +70,7 @@
         <omgdi:waypoint x="-245.0" y="-605.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="shape-f03dc92d-c6ed-44f4-925a-808842661b06" bpmnElement="sid-6f6831c4-337a-469e-b069-cd98dbfe7c56">
-        <omgdc:Bounds x="-50.0" y="-460.0" width="100.0" height="80.0"/>
+        <omgdc:Bounds x="-65.0" y="-445.0" width="100.0" height="80.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="edge-b6b6c648-40fd-42c1-b56a-4e65ae2361c2" bpmnElement="sid-eefa8be9-03ac-499d-9d96-6b8d63512c85">
         <omgdi:waypoint x="-245.0" y="-355.0"/>
@@ -78,20 +78,20 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge-f9770f84-91e4-4d7b-ad01-9cca3015ff8d" bpmnElement="sid-5c357941-d75f-4897-a8db-3d87032ab50d">
         <omgdi:waypoint x="-170.0" y="-485.0"/>
-        <omgdi:waypoint x="-50.0" y="-420.0"/>
+        <omgdi:waypoint x="-65.0" y="-405.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge-1c2c4b2e-c82e-405e-be6f-6aec95384e10" bpmnElement="sid-1531fd7b-5369-4f70-a657-9b8bbd2a02fb">
         <omgdi:waypoint x="-170.00002" y="-525.0"/>
-        <omgdi:waypoint x="110.0" y="-745.0"/>
-        <omgdi:waypoint x="110.0" y="-1025.0001"/>
+        <omgdi:waypoint x="125.0" y="-525.0"/>
+        <omgdi:waypoint x="125.0" y="-1025.0001"/>
         <omgdi:waypoint x="-170.0" y="-1025.0001"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="shape-03c0d97f-34d2-46a9-99a1-1a9da7332bfc" bpmnElement="sid-daa565c5-7f3b-4299-ba3b-9ce976c2c183">
-        <omgdc:Bounds x="-5.0" y="-255.0" width="30.0" height="30.0"/>
+        <omgdc:Bounds x="-30.0" y="-255.0" width="30.0" height="30.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="edge-d282e91b-c469-4f4e-900d-f9d8cffa90e3" bpmnElement="sid-d4fd8522-a661-4775-8866-d8c67d35c9a0">
-        <omgdi:waypoint x="0.0" y="-380.0"/>
-        <omgdi:waypoint x="2.5" y="-255.0"/>
+        <omgdi:waypoint x="-15.0" y="-365.0"/>
+        <omgdi:waypoint x="-15.0" y="-255.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
