@@ -13,6 +13,7 @@
     <description>工程管理系统</description>
     
     <properties>
+        <flowable.version>6.7.2</flowable.version>
         <ruoyi.version>3.8.9</ruoyi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,6 +31,7 @@
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
+        <flowable.version>6.8.0</flowable.version>
         <!-- override dependency version -->
         <tomcat.version>9.0.96</tomcat.version>
         <logback.version>1.2.13</logback.version>
@@ -225,12 +227,37 @@
                 <version>${ruoyi.version}</version>
             </dependency>
 
-            <!-- 工作流程-->
+            <!-- 流程管理-->
             <dependency>
                 <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-workflow</artifactId>
-                <version>${ruoyi.version}</version>
+                <artifactId>ruoyi-flowable</artifactId>
+                <version>3.8.8</version>
             </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>1.5.21</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-spring-boot-starter</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.4.0</version>
+            </dependency>
+
+            <!--el表达式计算-->
+
+            <dependency>
+                <groupId>com.googlecode.aviator</groupId>
+                <artifactId>aviator</artifactId>
+                <version>5.3.3</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
@@ -243,7 +270,7 @@
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
         <module>ruoyi-personnel</module>
-        <module>ruoyi-workflow</module>
+        <module>ruoyi-flowable</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -161,6 +161,84 @@ export const dynamicRoutes = [
         meta: { title: '修改生成配置', activeMenu: '/tool/gen' }
       }
     ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'definition/model/',
+        component: () => import('@/views/flowable/definition/model'),
+        name: 'Model',
+        meta: { title: '流程设计', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/finished/detail/index',
+        component: () => import('@/views/flowable/task/finished/detail/index'),
+        name: 'FinishedRecord',
+        meta: { title: '流程详情', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/myProcess/detail/index',
+        component: () => import('@/views/flowable/task/myProcess/detail/index'),
+        name: 'MyProcessRecord',
+        meta: { title: '流程详情', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/myProcess/send/index',
+        component: () => import('@/views/flowable/task/myProcess/send/index'),
+        name: 'SendRecord',
+        meta: { title: '流程发起', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/todo/detail/index',
+        component: () => import('@/views/flowable/task/todo/detail/index'),
+        name: 'TodoRecord',
+        meta: { title: '流程处理', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/tool',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'build/index',
+        component: () => import('@/views/tool/build/index'),
+        name: 'FormBuild',
+        meta: { title: '表单配置', icon: '' }
+      }
+    ]
   }
 ]
 

@@ -4,7 +4,7 @@
     <el-row :gutter="20">
       <el-col :sm="24" :lg="24">
         <blockquote class="text-warning" style="font-size: 14px">
-          你有一条通知<el-link href="" type="primary" target="_blank">☛☛点我进入☚☚</el-link> &nbsp;&nbsp;&nbsp; 你有一条消息<el-link href="" type="primary" target="_blank">☛☛点我进入☚☚</el-link>
+          你有一条通知<el-link href="http://localhost/system/notice" type="primary" target="_blank">☛☛点我进入☚☚</el-link>
         </blockquote>
         <hr />
       </el-col>
@@ -61,9 +61,9 @@
             </ul>
           </el-col>
           <el-col :span="6">
-            <h4>通知</h4>
+            <h4>恭喜！</h4>
             <ul>
-              <li>恭喜您在福利活动中</li>
+              <li>您在福利活动中</li>
               <li>获得一等奖</li>
               <li>请尽快领取</li>
               <li>...</li>
