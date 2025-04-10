@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * 启动程序
  * 
- * @author ruoyi
+ * @author whitesera
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 @ComponentScan(basePackages = {"com.ruoyi.*"})

@@ -87,6 +87,97 @@ export const constantRoutes = [
         meta: { title: '个人中心', icon: 'user' }
       }
     ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'definition/model/',
+        component: () => import('@/views/flowable/definition/model'),
+        name: 'Model',
+        meta: { title: '流程设计', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/finished/detail/index',
+        component: () => import('@/views/flowable/task/finished/detail/index'),
+        name: 'FinishedRecord',
+        meta: { title: '流程详情', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/myProcess/detail/index',
+        component: () => import('@/views/flowable/task/myProcess/detail/index'),
+        name: 'MyProcessRecord',
+        meta: { title: '流程详情', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/myProcess/send/index',
+        component: () => import('@/views/flowable/task/myProcess/send/index'),
+        name: 'SendRecord',
+        meta: { title: '流程发起', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/todo/detail/index',
+        component: () => import('@/views/flowable/task/todo/detail/index'),
+        name: 'TodoRecord',
+        meta: { title: '流程处理', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/flowable',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'task/flowForm/index',
+        component: () => import('@/views/flowable/task/flowForm/index'),
+        name: 'FlowForm',
+        meta: { title: '流程表单', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/tool',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'build/index',
+        component: () => import('@/views/tool/build/index'),
+        name: 'FormBuild',
+        meta: { title: '表单配置', icon: '' }
+      }
+    ]
   }
 ]
 
@@ -162,84 +253,7 @@ export const dynamicRoutes = [
       }
     ]
   },
-  {
-    path: '/flowable',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'definition/model/',
-        component: () => import('@/views/flowable/definition/model'),
-        name: 'Model',
-        meta: { title: '流程设计', icon: '' }
-      }
-    ]
-  },
-  {
-    path: '/flowable',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'task/finished/detail/index',
-        component: () => import('@/views/flowable/task/finished/detail/index'),
-        name: 'FinishedRecord',
-        meta: { title: '流程详情', icon: '' }
-      }
-    ]
-  },
-  {
-    path: '/flowable',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'task/myProcess/detail/index',
-        component: () => import('@/views/flowable/task/myProcess/detail/index'),
-        name: 'MyProcessRecord',
-        meta: { title: '流程详情', icon: '' }
-      }
-    ]
-  },
-  {
-    path: '/flowable',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'task/myProcess/send/index',
-        component: () => import('@/views/flowable/task/myProcess/send/index'),
-        name: 'SendRecord',
-        meta: { title: '流程发起', icon: '' }
-      }
-    ]
-  },
-  {
-    path: '/flowable',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'task/todo/detail/index',
-        component: () => import('@/views/flowable/task/todo/detail/index'),
-        name: 'TodoRecord',
-        meta: { title: '流程处理', icon: '' }
-      }
-    ]
-  },
-  {
-    path: '/tool',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'build/index',
-        component: () => import('@/views/tool/build/index'),
-        name: 'FormBuild',
-        meta: { title: '表单配置', icon: '' }
-      }
-    ]
-  }
+
 ]
 
 // 防止连续点击多次路由报错

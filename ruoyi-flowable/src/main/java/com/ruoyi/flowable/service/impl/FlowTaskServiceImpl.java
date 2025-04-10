@@ -1114,8 +1114,8 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
             parameters = taskService.getVariables(taskId);
         }
         JSONObject oldVariables = JSONObject.parseObject(JSON.toJSONString(parameters.get("formJson")));
-        List<JSONObject> oldFields = JSON.parseObject(JSON.toJSONString(oldVariables.get("widgetList")), new TypeReference<List<JSONObject>>() {
-        });
+        List<JSONObject> oldFields = JSON.parseObject(JSON.toJSONString(oldVariables.get("widgetList")),
+                new TypeReference<List<JSONObject>>() {}.getType());
         // 设置已填写的表单为禁用状态
         for (JSONObject oldField : oldFields) {
             JSONObject options = oldField.getJSONObject("options");
@@ -1125,8 +1125,8 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
         if (StringUtils.isNotBlank(task.getFormKey())) {
             SysForm sysForm = sysFormService.selectSysFormById(Long.parseLong(task.getFormKey()));
             JSONObject data = JSONObject.parseObject(sysForm.getFormContent());
-            List<JSONObject> newFields = JSON.parseObject(JSON.toJSONString(data.get("widgetList")), new TypeReference<List<JSONObject>>() {
-            });
+            List<JSONObject> newFields = JSON.parseObject(JSON.toJSONString(data.get("widgetList")),
+                    new TypeReference<List<JSONObject>>() {}.getType());
             // 表单回显时 加入子表单信息到流程变量中
             for (JSONObject newField : newFields) {
                 String key = newField.getString("id");
