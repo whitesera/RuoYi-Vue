@@ -97,7 +97,7 @@
         </template>
       </el-table-column>
       <el-table-column label="部署时间" align="center" prop="deploymentTime" width="180"/>
-      <el-table-column label="操作" width="250" fixed="right"class-name="small-padding fixed-width">
+      <el-table-column label="操作" width="250" fixed="right" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button @click="handleLoadXml(scope.row)" icon="el-icon-edit-outline" type="text" size="small">设计</el-button>
           <el-button @click="handleAddForm(scope.row)" icon="el-icon-edit-el-icon-s-promotion" type="text" size="small" v-if="scope.row.formId == null">配置主表单</el-button>
