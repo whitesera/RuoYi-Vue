@@ -76,11 +76,12 @@ spring:
     # 密码
     password:
     # 连接超时时间
-    timeout: 10s
+    timeout: 50s
     lettuce:
+      shutdown-timeout: 5000ms
       pool:
         # 连接池中的最小空闲连接
-        min-idle: 0
+        min-idle: 16
         # 连接池中的最大空闲连接
         max-idle: 8
         # 连接池的最大数据库连接数
@@ -133,4 +134,5 @@ flowable:
   # true 会对数据库中所有表进行更新操作。如果表不存在，则自动创建(建议开发时使用)
   database-schema-update: true
   # 关闭定时任务JOB
+  qsync-enabled: false
   async-executor-activate: false
