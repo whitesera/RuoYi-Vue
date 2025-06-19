@@ -74,7 +74,7 @@
           <div class="body">
             系统测试中
             如遇到问题BUG
-            请联系：18277302640
+            请联系管理员
           </div>
         </el-card>
       </el-col>
