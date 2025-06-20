@@ -223,10 +223,10 @@
               @keyup.enter.native="handleQuery"
             />
           </el-form-item>
-          <el-form-item label="车辆信息" prop="vehicleInfo">
+          <el-form-item label="岗位状态" prop="vehicleInfo">
             <el-input
               v-model="queryParams.vehicleInfo"
-              placeholder="请输入车辆信息"
+              placeholder="请输入岗位状态"
               clearable
               @keyup.enter.native="handleQuery"
             />
@@ -344,6 +344,7 @@
     <el-table v-loading="loading" :data="archivesList" @selection-change="handleSelectionChange">
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="编号" align="center" prop="id" />
+      <el-table-column label="岗位状态" align="center" prop="vehicleInfo" />
       <el-table-column label="工号" align="center" prop="workNumber" />
       <el-table-column label="姓名" align="center" prop="name" />
       <el-table-column label="身份证号" align="center" prop="idCard" />
@@ -403,7 +404,6 @@
       </el-table-column>
       <el-table-column label="证书" align="center" prop="certification" />
       <el-table-column label="招聘渠道" align="center" prop="recruitmentChannel" />
-      <el-table-column label="车辆信息" align="center" prop="vehicleInfo" />
       <el-table-column label="上家单位信息" align="center" prop="previousEmployer" />
       <el-table-column label="住宿" align="center" prop="accommodation" />
       <el-table-column label="毕业院校" align="center" prop="almaMater" />
@@ -456,6 +456,9 @@
     <!-- 添加或修改花名册对话框 -->
     <el-dialog :title="title" :visible.sync="open" width="500px" append-to-body>
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
+        <el-form-item label="岗位状态" prop="vehicleInfo">
+          <el-input v-model="form.vehicleInfo" placeholder="请输入岗位状态" />
+        </el-form-item>
         <el-form-item label="工号" prop="workNumber">
           <el-input v-model="form.workNumber" placeholder="请输入工号" />
         </el-form-item>
@@ -576,9 +579,6 @@
         </el-form-item>
         <el-form-item label="招聘渠道" prop="recruitmentChannel">
           <el-input v-model="form.recruitmentChannel" placeholder="请输入招聘渠道" />
-        </el-form-item>
-        <el-form-item label="车辆信息" prop="vehicleInfo">
-          <el-input v-model="form.vehicleInfo" placeholder="请输入车辆信息" />
         </el-form-item>
         <el-form-item label="上家单位信息" prop="previousEmployer">
           <el-input v-model="form.previousEmployer" placeholder="请输入上家单位信息" />

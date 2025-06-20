@@ -1,11 +1,12 @@
 package com.ruoyi.system.domain;
 
-import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ruoyi.common.annotation.Excel;
 import com.ruoyi.common.core.domain.BaseEntity;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import java.util.Date;
 
 /**
  * 花名册对象 personnel_archives
@@ -114,8 +115,8 @@ public class PersonnelArchives extends BaseEntity
     @Excel(name = "招聘渠道")
     private String recruitmentChannel;
 
-    /** 车辆信息 */
-    @Excel(name = "车辆信息")
+    /** 在职情况 */
+    @Excel(name = "在职情况")
     private String vehicleInfo;
 
     /** 上家单位信息 */
